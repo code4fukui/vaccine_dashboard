@@ -40,7 +40,7 @@ const fetchData = async (city) => {
   const data = CSV.toJSON(await CSV.fetch(url));
   console.log(data);
   data.forEach(d => d.空き状況2週間以内 = filterDates(d.空き状況));
-  const data2 = data.filter(d => (city ? d[""] == city : true) && (d.空き状況2週間以内 || d.id == 680)).map(d => {
+  const data2 = data.filter(d => (city ? d[""] == city : true) && d.空き状況2週間以内).map(d => {
     return {
       医療機関名: d.医療機関名,
       市町名: d[""],

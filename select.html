@@ -1,65 +1,55 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
 <title>FUKUIワクチンダッシュボード</title>
 <meta charset="utf-8">
 <style>
 body {
 	text-align: center;
+	font-family: sans-serif;
 }
-.caption {
-	font-size: 80%;
+main {
+	margin: .5em;
+	padding: 2em .5em;
+	border: solid 1vw #279827;
 }
-/* tabularmaps */
-.tabularmaps {
-	border-spacing: 1vw;
-	border-collapse: separate;
-	display: inline-block;
-	x-max-width: 600px;
-	x-height: 67vw;
-	position: relative;
+.content {
+	font-size: 120%;
+	margin: 2em 0;
 }
-.tabularmaps td {
-	width: calc(90vw / 4);
-	height: calc(40vw / 5);
-	font-size: 3vw;
-	vertical-align: middle;
-	text-align: center;
-	border-radius: .5vw;
-	border: 1px solid #333;
-	margin: 3vw;
-	color: #999;
+#hapiryu {
+	width: 15vw;
 }
-.tabularmaps td a {
-	color: #174299;
+@media only screen and (min-width: 1000px) {
+	#hapiryu {
+		position: fixed;
+		top: 8vw;
+		right: 5vw;
+		width: 10vw;
+	}
+	.content {
+		font-size: 200%;
+		margin: 2em 0;
+	}
 }
-/*
-.tabularmaps a {
-	text-decoration: none;
-	color: black;
-}
-.tabularmaps a:visited {
-	text-decoration: none;
-	color: #055;
-}
-*/
-.tmnull {
-	background-color: #eee;
-}
-#tmtitle {
-	color: white;
+.sabae {
+	font-size: 120%;
 }
 </style>
 </head>
 <body>
-<b>お住まいの市町を選択してください</b>
-<div class=caption>
-公開の対象<br>
-・自ら予約を受け付けており、かつ、予約枠に空きがある医療機関<br>
-（敦賀市、大野市、鯖江市、あわら市、越前市、坂井市、池田町、南越前町、越前町）<br>
-・市町で予約を受け付けており、かつ、予約枠に空きがある医療機関<br>
-（福井市、おおい町）<br>
-※空きがある医療機関が１件以上ある市町のみがクリックできます。
+<main>
+<div class=content>
+FUKUI<wbr>ワクチンダッシュボードは<br>
+令和5年4月19日をもって<br>
+終了いたしました。
 </div>
 
-<script type="module" src="select.js"></script>
+<img id=hapiryu src="hapiryu.png">
+
+<div class="sabae">
+※鯖江市は引き続き下記のリンクからご覧になれます。<br>
+「<a href=https://code4fukui.github.io/vaccine_dashboard/#%E9%AF%96%E6%B1%9F%E5%B8%82>FUKUIワクチンダッシュボード 鯖江市</a>」
+</div>
+</main>
+
 </body>
 </html>
